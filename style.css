@@ -163,7 +163,6 @@ body {
 }
 
 .repo-item:hover{
-    text-decoration: none;
     background-color: #3e4163;
     transition: ease-in-out 0.2s;
 }
@@ -173,6 +172,7 @@ body {
     transition: ease-in-out 0.2s;
 }
 
-a:hover{
-    text-decoration: none;
+a{
+  text-decoration: none;
 }
+
