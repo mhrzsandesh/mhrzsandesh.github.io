@@ -2,16 +2,13 @@ fetch("https://api.github.com/users/mhrzsandesh")
 .then(response => response.json())
 .then(function(data){
     let name = data['name']
-    let intro = `Hello!! I am ${name}`
+    let intro = `I am ${name}`
     document.getElementById('image').src = data['avatar_url']
     document.getElementById('name').textContent = intro
     document.getElementById('bio').textContent = data['bio']
     document.getElementById('github').href = data['html_url']
     document.getElementById('main_container').hidden = false
-    
-
 })
-
 
 function genRepo(){
     fetch('https://api.github.com/users/ghaleprachan/repos')
@@ -34,13 +31,14 @@ function genRepo(){
             }
                 
         // Puts repo information into div
-        document.getElementById('repo-box').innerHTML +=
-            "<a href='" + repo_url + "' target='_blank'><div class='repo-item'><h1 class='title'>" +
-        repo_name + "</h1><p class='description'>" +
-        repo_description + "</p>" + "<div class='bottom'><div class='language'>" +
-        repo_language + "</div></div></div>" 
+        document.getElementById('repos').innerHTML +=
+            "<a href='" + repo_url + "' target='_blank'>"+
+            "<div class='repo-box'>"+
+            "<h2 class='title'>" +repo_name + "</h2>"+
+            "<p class='description'>" + repo_description + "</p>" +
+            "<strong class='language'>" + repo_language + "</strong></div>" 
         ;
         }
     })
-    document.getElementById('loader').hidden = true
+    // document.getElementById('loader').hidden = true
 }
