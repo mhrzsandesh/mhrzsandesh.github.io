@@ -14,7 +14,7 @@ function genRepo(){
     fetch('https://api.github.com/users/ghaleprachan/repos')
     .then(response => response.json())
     .then(function(repo){
-        console.log(repo)
+        // console.log(repo)
         for (i = 0; i < repo.length; i++) {
         // variables from api repo
         var repo_url = repo[i].html_url;
