@@ -21,12 +21,9 @@ function genRepo(){
         for (i = 0; i < repo.length; i++) {
         // variables from api repo
         var repo_url = repo[i].html_url;
-        var username = repo[i].owner.login;
         var repo_name = repo[i].name;
         var repo_description = repo[i].description;
         var repo_language = repo[i].language;
-        var repo_stars = repo[i].stargazers_count;
-        var repo_forks = repo[i].forks;
                 
         // replaces null values to be better represented when displayed
         if (repo_description == null) {
