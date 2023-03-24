@@ -1,41 +1,27 @@
-// import components
-import Hero from "./components/Hero";
-import Navbar from "./Layouts/Navbar";
-import Skills from "./components/Skills";
-import Service from "./components/Services";
-import Projects from "./components/Projects";
-import Testimonials from "./components/Testimonials";
-import Hireme from "./components/Hireme";
-import Contact from "./components/Contact";
-import { useEffect } from "react";
-// Animation package
-import Aos from "aos";
-import "aos/dist/aos.css";
+import { BrowserRouter } from "react-router-dom";
+
+import { About, Contact, Experience, Hero, Navbar, Tech, StarsCanvas } from "./components";
 
 const App = () => {
-  useEffect(() => {
-    Aos.init({
-      duration: 1800,
-      offset: 100,
-      disable: "mobile",
-    });
-  }, []);
   return (
-    <div className="">
-      <Navbar />
-      <Hero />
-      <Skills />
-      <Service />
-      {/* <Projects /> */}
-      {/* <Testimonials /> */}
-      <Hireme />
-      <Contact />
-      <footer className="p-3 text-center">
-        <h6 className="mb-3">SANDESH MAHARJAN</h6>
-        <p>thisisnotsandesh © All CopyRights Reserved 2023</p>
-      </footer>
-    </div>
+    <BrowserRouter>
+      <div className='relative z-0 bg-primary'>
+        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+          <Navbar />
+          <Hero />
+        </div>
+        <About />
+        <Experience />
+        <Tech />
+        {/* <Works /> */}
+        {/* <Feedbacks /> */}
+        <div className='relative z-0'>
+          <Contact />
+          <StarsCanvas />
+        </div>
+      </div>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;
