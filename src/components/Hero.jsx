@@ -1,48 +1,55 @@
-import { motion } from "framer-motion";
-
-import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
-
+// import content
+import { useEffect } from "react";
+import { content } from "../Content";
 const Hero = () => {
+  const { hero } = content;
+
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
-      <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
-      >
-        <div className='flex flex-col justify-center items-center mt-5'>
-          <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
-          <div className='w-1 sm:h-80 h-40 violet-gradient' />
-        </div>
-
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>Sandesh</span>
+    <section id="home" className="overflow-hidden">
+      <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
+        <div
+          data-aos="slide-left"
+          data-aos-delay="1200"
+          className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10"
+        >
+          <h1 className="rotate-90 absolute top-[30%] right-[-15%] text-[#EAF2FA]">
+            {hero.firstName}{" "}
+            <span className="text-dark_primary">{hero.LastName}</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop 3D visuals, user <br className='sm:block hidden' />
-            interfaces and web applications
-          </p>
         </div>
-      </div>
 
-      <ComputersCanvas />
-
-      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
-        <a href='#about'>
-          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className='w-3 h-3 rounded-full bg-secondary mb-1'
-            />
+        {/* first col */}
+        <div className="pb-16 px-6 pt-5" data-aos="fade-down">
+          <h2>{hero.title}</h2>
+          <br />
+          <div className="flex justify-end">
+            <button className="btn">{hero.btnText}</button>
           </div>
-        </a>
+          <div className="flex flex-col gap-10 mt-10">
+            {hero.hero_content.map((content, i) => (
+              <div
+                key={i}
+                data-aos="fade-down"
+                data-aos-delay={i * 300}
+                className={`flex items-center w-80 gap-5
+            ${i === 1 && " flex-row-reverse text-right"}  `}
+              >
+                <h3>{content.count}</h3>
+                <p>{content.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* sec col */}
+        <div className="md:h-[37rem] h-96">
+          <img
+            src={hero.image}
+            data-aos="slide-up"
+            alt="..."
+            className="h-full object-cover"
+          />
+        </div>
       </div>
     </section>
   );
