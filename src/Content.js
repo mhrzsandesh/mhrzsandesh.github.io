@@ -81,37 +81,37 @@ export const content = {
     skills_content: [
       {
         name: "Python",
-        para: "Lorem ipsum text  dummy",
+        para: "Python for Data Analysis and Machine Learning",
         logo: python,
       },
       {
         name: "Node js",
-        para: "Lorem ipsum text  dummy",
+        para: "Node js framework for backend of chat application",
         logo: nodejs,
       },
       {
         name: "SQL",
-        para: "Lorem ipsum text  dummy",
+        para: "Store Procedures for the backend logic of application",
         logo: sketch,
       },
       {
         name: "React js",
-        para: "Lorem ipsum text  dummy",
+        para: "React js for frontend of chat application and portfolio",
         logo: reactjs,
       },
       {
         name: "Git",
-        para: "Lorem ipsum text  dummy",
+        para: "Git to keep track of codes",
         logo: git,
       },
       {
         name: "Jira",
-        para: "Lorem ipsum text  dummy",
+        para: "Jira to keep track of tasks and bugs",
         logo: ps,
       },
       {
         name: "Figma",
-        para: "Lorem ipsum text  dummy",
+        para: "Figma for UI/UX designs",
         logo: figma,
       },
     ],
@@ -123,17 +123,17 @@ export const content = {
     service_content: [
       {
         title: "Web Development",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
+        para: "In developing web based application using React js for frontend and Node js/PHP/SQL Server for backednd with clean and reausable codes.",
         logo: services_logo1,
       },
       {
         title: "ui / ux DESIGNING",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
+        para: "In designing user friendly interfaces to give the best user experience of the application using Figma/Adobe XD",
         logo: services_logo2,
       },
       {
         title: "Project Management",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
+        para: "In keeping track of the story and bugs. Assigning the work to right resources and keeping a friendly and workable enviroment in the team",
         logo: services_logo3,
       },
     ],
@@ -192,7 +192,7 @@ export const content = {
     subtitle: "FOR YOUR PROJECTS",
     image1: Hireme_person,
     image2: Hireme_person2,
-    para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
+    para: "For desiging the product with a feel of modern UI and smooth User Experience. And to develop the application using modern farameworks for smooth performance and manageable codes.",
     btnText: "Hire Me",
   },
   Contact: {
